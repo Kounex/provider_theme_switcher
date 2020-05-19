@@ -23,6 +23,10 @@ extension ThemeFunctions on Themes {
         Themes.CUSTOM: ThemeData.dark().copyWith(
           primaryColor: Colors.purple,
           accentColor: Colors.redAccent,
+          floatingActionButtonTheme: FloatingActionButtonThemeData(
+            foregroundColor: Colors.white,
+            backgroundColor: Colors.purple,
+          ),
           scaffoldBackgroundColor: Colors.deepOrangeAccent,
           backgroundColor: Colors.deepOrangeAccent,
           canvasColor: Colors.deepOrangeAccent,
