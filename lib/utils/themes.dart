@@ -18,8 +18,18 @@ enum Themes {
 /// support intellisense in a short and easy way
 extension ThemeFunctions on Themes {
   ThemeData get themeData => {
-        Themes.DEFAULT: ThemeData.light(),
-        Themes.DARK: ThemeData.dark(),
+        Themes.DEFAULT: ThemeData.light().copyWith(
+          floatingActionButtonTheme: FloatingActionButtonThemeData(
+            foregroundColor: Colors.white,
+            backgroundColor: Colors.blue,
+          ),
+        ),
+        Themes.DARK: ThemeData.dark().copyWith(
+          floatingActionButtonTheme: FloatingActionButtonThemeData(
+            foregroundColor: Colors.black,
+            backgroundColor: Colors.tealAccent,
+          ),
+        ),
         Themes.CUSTOM: ThemeData.dark().copyWith(
           primaryColor: Colors.purple,
           accentColor: Colors.redAccent,
